@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions Agentiques - Galliera Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero-pattern {
+            background-color: #f8f9fa;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 3px;
+            background-color: #000;
+        }
+        
+        .architecture-item {
+            border-left: 3px solid #000;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .use-case-card {
+            border-radius: 8px;
+            border-top: 5px solid #000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .use-case-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .technology-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .technology-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-card {
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            padding: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 0.375rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            color: white;
+            background-color: #000;
+        }
+        
+        .btn-primary:hover {
+            background-color: #333;
+        }
+        
+        .btn-outline {
+            color: #000;
+            border: 2px solid #000;
+        }
+        
+        .btn-outline:hover {
+            color: white;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header Section -->
+    <header class="py-20 hero-pattern">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col items-center text-center">
+                <div class="mb-8">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-4">gallierā</h1>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Solutions Agentiques</h2>
+                <p class="text-xl md:text-2xl max-w-3xl">Transformer votre entreprise avec des agents IA autonomes et intelligents.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-3xl font-bold section-title">Introduction aux Solutions Agentiques</h3>
+                <p class="mb-6">Dans un monde où l'intelligence artificielle transforme radicalement les processus d'entreprise, les solutions agentiques représentent la prochaine frontière de l'innovation. Ces agents IA autonomes vont au-delà des outils d'IA traditionnels en combinant intelligence, autonomie et capacité d'action.</p>
+                <p class="mb-6">Chez Galliera Group, nous concevons des solutions agentiques de pointe qui permettent d'automatiser des processus complexes, d'améliorer la prise de décision et d'optimiser les opérations à travers tous les départements de votre organisation.</p>
+                <p>Notre approche unique combine une architecture avancée, une méthodologie éprouvée et une compréhension approfondie des besoins métier, permettant de créer des systèmes d'agents IA qui délivrent une valeur tangible et mesurable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Approche Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-3xl font-bold section-title mb-10">Notre Approche</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card bg-white p-6">
+                        <div class="text-2xl mb-4">01</div>
+                        <h4 class="text-xl font-semibold mb-3">Architecture First</h4>
+                        <p>Nous privilégions une conception architecturale robuste plutôt que de simples prompts avancés. L'architecture est le fondement de systèmes d'agents véritablement efficaces.</p>
+                    </div>
+                    <div class="card bg-white p-6">
+                        <div class="text-2xl mb-4">02</div>
+                        <h4 class="text-xl font-semibold mb-3">Intégration Complète</h4>
+                        <p>Nos solutions combinent harmonieusement agents IA, systèmes d'automatisation et validation humaine pour créer un écosystème cohérent et performant.</p>
+                    </div>
+                    <div class="card bg-white p-6">
+                        <div class="text-2xl mb-4">03</div>
+                        <h4 class="text-xl font-semibold mb-3">Centrés sur les Résultats</h4>
+                        <p>Chaque solution que nous développons est conçue pour générer un impact business mesurable avec des indicateurs de performance clairs.</p>
+                    </div>
+                </div>
+                <div class="mt-12 p-6 bg-black text-white rounded-lg">
+                    <p class="text-lg italic">"Un agent IA est comme un PDG sans entreprise" - il a besoin d'un orchestre complet pour performer, pas seulement d'un chef d'orchestre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types d'Agents Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold section-title mb-12 max-w-4xl mx-auto">Types d'Agents IA</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="card bg-white p-6 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-newspaper text-2xl mr-4"></i>
+                        <h4 class="text-xl font-semibold">Agent d'Information</h4>
+                    </div>
+                    <p class="mb-4">Collecte, analyse et synthétise automatiquement des informations pertinentes à partir de diverses sources pour alimenter la prise de décision.</p>
+                    <ul class="text-sm space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Veille concurrentielle</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Surveillance de marché</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Synthèse d'actualités</li>
+                    </ul>
+                </div>
+                
+                <div class="card bg-white p-6 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-bullhorn text-2xl mr-4"></i>
+                        <h4 class="text-xl font-semibold">Agent de Prospection</h4>
+                    </div>
+                    <p class="mb-4">Identifie des leads qualifiés, personnalise la communication et optimise les démarches de prospection à grande échelle.</p>
+                    <ul class="text-sm space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Outreach LinkedIn personnalisé</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Qualification de leads</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Suivi automatisé</li>
+                    </ul>
+                </div>
+                
+                <div class="card bg-white p-6 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-edit text-2xl mr-4"></i>
+                        <h4 class="text-xl font-semibold">Agent de Contenu</h4>
+                    </div>
+                    <p class="mb-4">Simplifie et accélère la création de contenu de qualité en automatisant l'ensemble du processus, de la recherche à la publication.</p>
+                    <ul class="text-sm space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Recherche de mots-clés</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Rédaction multiplateforme</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Adaptation de contenu</li>
+                    </ul>
+                </div>
+                
+                <div class="card bg-white p-6 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-database text-2xl mr-4"></i>
+                        <h4 class="text-xl font-semibold">Agent d'Analyse de Données</h4>
+                    </div>
+                    <p class="mb-4">Transforme des données brutes en insights actionnables grâce à une analyse conversationnelle combinant collecte, analyse et visualisation.</p>
+                    <ul class="text-sm space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Analyse conversationnelle</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Visualisation de données</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Prévisions avancées</li>
+                    </ul>
+                </div>
+                
+                <div class="card bg-white p-6 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-headset text-2xl mr-4"></i>
+                        <h4 class="text-xl font-semibold">Agent de Support Client</h4>
+                    </div>
+                    <p class="mb-4">Répond instantanément aux requêtes clients, résout les problèmes techniques et améliore continuellement la qualité du service.</p>
+                    <ul class="text-sm space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Support multilingue 24/7</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Résolution proactive</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Escalade intelligente</li>
+                    </ul>
+                </div>
+                
+                <div class="card bg-white p-6 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-2xl mr-4"></i>
+                        <h4 class="text-xl font-semibold">Agent de Connaissance Interne</h4>
+                    </div>
+                    <p class="mb-4">Centralise et contextualise les connaissances internes de l'entreprise pour faciliter l'accès à l'information et accélérer la prise de décision.</p>
+                    <ul class="text-sm space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Hébergement privé</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Accès sécurisé aux documents</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Confidentialité totale</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="#use-cases" class="btn btn-outline">Explorer les cas d'usage détaillés</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold section-title mb-12 max-w-4xl mx-auto">Architectures Multi-Agents</h3>
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-10">Chez Galliera, nous avons développé des architectures avancées pour maximiser l'efficacité des systèmes d'agents IA. L'architecture est un facteur plus déterminant que les prompts pour construire des solutions véritablement performantes.</p>
+                
+                <div class="architecture-item">
+                    <h4 class="text-xl font-semibold mb-2">Prompt-Chaining</h4>
+                    <p class="mb-4">Décomposition des tâches complexes en étapes séquentielles, permettant d'améliorer significativement la précision pour les workflows critiques.</p>
+                    <div class="bg-white p-4 rounded-lg text-sm">
+                        <p class="italic text-gray-600">Application : Traitement des demandes de conformité dans le secteur financier, réduisant les erreurs de 78%.</p>
+                    </div>
+                </div>
+                
+                <div class="architecture-item">
+                    <h4 class="text-xl font-semibold mb-2">Architecture de Routage</h4>
+                    <p class="mb-4">Utilisation d'un classificateur pour diriger les requêtes vers des processus IA spécialisés, transformant les temps de réponse de jours en minutes.</p>
+                    <div class="bg-white p-4 rounded-lg text-sm">
+                        <p class="italic text-gray-600">Application : Gestion des demandes clients dans le secteur manufacturier, avec un temps de réponse réduit de 92%.</p>
+                    </div>
+                </div>
+                
+                <div class="architecture-item">
+                    <h4 class="text-xl font-semibold mb-2">Parallélisation</h4>
+                    <p class="mb-4">Exécution simultanée de multiples processus IA, permettant d'analyser des milliers d'enregistrements en un temps record.</p>
+                    <div class="bg-white p-4 rounded-lg text-sm">
+                        <p class="italic text-gray-600">Application : Analyse des dossiers médicaux dans le secteur de la santé, multipliant par 50 la vitesse de traitement.</p>
+                    </div>
+                </div>
+                
+                <div class="architecture-item">
+                    <h4 class="text-xl font-semibold mb-2">Orchestrateur-Workers</h4>
+                    <p class="mb-4">Structure "manager-employés" où un orchestrateur décompose les tâches et des workers spécialisés les exécutent, réduisant les coûts tout en augmentant la qualité.</p>
+                    <div class="bg-white p-4 rounded-lg text-sm">
+                        <p class="italic text-gray-600">Application : Optimisation des processus de service client, avec une réduction des coûts de 42% et une amélioration de la satisfaction de 37%.</p>
+                    </div>
+                </div>
+                
+                <div class="architecture-item">
+                    <h4 class="text-xl font-semibold mb-2">Évaluateur-Optimiseur</h4>
+                    <p class="mb-4">Boucle de rétroaction où une IA génère du contenu et une autre l'évalue, permettant de réduire significativement les cycles de révision.</p>
+                    <div class="bg-white p-4 rounded-lg text-sm">
+                        <p class="italic text-gray-600">Application : Révision de documents juridiques, réduisant le temps de révision de 65% tout en améliorant la qualité.</p>
+                    </div>
+                </div>
+                
+                <div class="architecture-item">
+                    <h4 class="text-xl font-semibold mb-2">Agents Autonomes</h4>
+                    <p class="mb-4">IA auto-dirigée capable de planifier, d'utiliser des outils et de résoudre des problèmes complexes, transformant radicalement les workflows.</p>
+                    <div class="bg-white p-4 rounded-lg text-sm">
+                        <p class="italic text-gray-600">Application : Prévision des stocks et analyse de données, réduisant les ruptures de stock de 83% et accélérant l'analyse de 76%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Framework Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold section-title mb-12 max-w-4xl mx-auto">Cadre d'Implémentation</h3>
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-10">Notre approche d'implémentation est adaptée au niveau de maturité IA de votre organisation, garantissant une transition fluide et des résultats concrets.</p>
+                
+                <h4 class="text-xl font-semibold mb-4">Évaluation de la Maturité IA</h4>
+                <div class="table-container mb-12">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Catégorie</th>
+                                <th>Caractéristiques</th>
+                                <th>Approche Recommandée</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Entreprises AI-First</td>
+                                <td>Équipes de développement IA dédiées en interne</td>
+                                <td>Désignation d'un "Steward IA Générative" et intégration de ressources externes pour des projets spécifiques</td>
+                            </tr>
+                            <tr>
+                                <td>Organisations AI-Enabled</td>
+                                <td>Utilisation réussie de l'IA générative à travers les équipes</td>
+                                <td>Priorisation entre les options d'automatisation et arbitrage entre développement interne et solutions externes</td>
+                            </tr>
+                            <tr>
+                                <td>Entreprises AI-Curious</td>
+                                <td>Systèmes de base (CRM/ERP) en place, données existantes mais peu structurées</td>
+                                <td>Focus sur l'hygiène des données avant l'implémentation d'IA</td>
+                            </tr>
+                            <tr>
+                                <td>Entrepreneurs AI-Aspiring</td>
+                                <td>Utilisation d'outils basiques (ChatGPT, Copilot...)</td>
+                                <td>Standardisation des systèmes et des données, construction des fondations pour les futures automatisations</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h4 class="text-xl font-semibold mb-4">Méthodologie d'Intégration</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h5 class="font-semibold mb-3">Phase 1: Préparation</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">1</span>
+                                <span>Évaluation de la maturité IA et audit des données</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">2</span>
+                                <span>Identification des cas d'usage à fort impact</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">3</span>
+                                <span>Priorisation des initiatives et définition des KPIs</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h5 class="font-semibold mb-3">Phase 2: Conception</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">4</span>
+                                <span>Sélection de l'architecture optimale</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">5</span>
+                                <span>Conception de l'écosystème agents-automatisation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">6</span>
+                                <span>Définition des mécanismes de supervision humaine</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h5 class="font-semibold mb-3">Phase 3: Développement</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">7</span>
+                                <span>Implémentation par sprints itératifs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">8</span>
+                                <span>Tests continus et affinement des agents</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">9</span>
+                                <span>Intégration avec les systèmes existants</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h5 class="font-semibold mb-3">Phase 4: Déploiement & Suivi</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">10</span>
+                                <span>Déploiement progressif et montée en charge</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">11</span>
+                                <span>Monitoring des performances et optimisation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">12</span>
+                                <span>Évolution continue et extension des capacités</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-black text-white p-6 rounded-lg">
+                    <h5 class="font-semibold mb-3">Notre conviction</h5>
+                    <p class="italic">Pour les entreprises en phase d'exploration de l'IA, consacrer 3 à 6 mois à organiser les données est plus précieux que de poursuivre les derniers modèles d'IA et tendances. La qualité des données est le fondement de tout succès en IA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Framework Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold section-title mb-12 max-w-4xl mx-auto">Framework d'Intégration IA + Automatisation</h3>
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-10">Notre approche intègre harmonieusement les agents IA, l'automatisation des processus et la supervision humaine pour créer des écosystèmes performants et évolutifs.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold">Agents IA</h4>
+                        </div>
+                        <p class="mb-4">Fournissent la réflexion stratégique et prennent les décisions complexes nécessitant du jugement et de l'adaptabilité.</p>
+                        <p class="text-sm text-gray-600 italic">Rôle: Prise de décision, analyse complexe, adaptation aux situations nouvelles</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold">Automatisation</h4>
+                        </div>
+                        <p class="mb-4">Exécute avec constance et fiabilité les tâches répétitives et les processus standardisés à grande échelle.</p>
+                        <p class="text-sm text-gray-600 italic">Rôle: Exécution fiable, scaling des opérations, traitement systématique</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold">Orchestration</h4>
+                        </div>
+                        <p class="mb-4">Coordonne l'ensemble des composants pour assurer une collaboration fluide et une exécution optimale des processus.</p>
+                        <p class="text-sm text-gray-600 italic">Rôle: Coordination, planification, gestion des flux de travail</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold">Validation Humaine</h4>
+                        </div>
+                        <p class="mb-4">Apporte le jugement final sur les décisions critiques et guide l'évolution stratégique du système.</p>
+                        <p class="text-sm text-gray-600 italic">Rôle: Validation des décisions clés, supervision stratégique, orientation éthique</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+                    <h4 class="text-xl font-semibold mb-4">Workflow Hybride Recommandé</h4>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mr-4">1</div>
+                            <div>
+                                <p class="font-medium">Agents IA pour les jugements complexes</p>
+                                <p class="text-sm text-gray-600">Analyse des données, identification des tendances, recommandations adaptatives</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mr-4">2</div>
+                            <div>
+                                <p class="font-medium">Automatisation pour le travail répétitif</p>
+                                <p class="text-sm text-gray-600">Exécution des tâches standardisées, traitement des données, opérations à grande échelle</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mr-4">3</div>
+                            <div>
+                                <p class="font-medium">Humains pour la validation des décisions clés</p>
+                                <p class="text-sm text-gray-600">Approbation finale, supervision stratégique, ajustement des paramètres</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mr-4">4</div>
+                            <div>
+                                <p class="font-medium">Orchestration pour connecter tous les éléments</p>
+                                <p class="text-sm text-gray-600">Coordination des flux, gestion des dépendances, optimisation continue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold section-title mb-12 max-w-4xl mx-auto">Cas d'Usage par Domaine</h3>
+            
+            <!-- Marketing & Communication -->
+            <div class="max-w-5xl mx-auto mb-16">
+                <h4 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-bullhorn text-xl mr-3"></i>
+                    Marketing & Communication
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-blue-50 text-blue-700 mb-3">Génération de Contenu</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent de Contenu Multicanal</h5>
+                        <p class="mb-4 text-sm">Génère et optimise automatiquement du contenu adapté à différentes plateformes à partir d'une seule demande.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Résultats clés:</p>
+                            <ul class="space-y-1">
+                                <li>• Réduction de 80% des goulots d'étranglement dans la création de contenu</li>
+                                <li>• Transformation d'un processus de 2 semaines en 2 jours</li>
+                                <li>• Économie de 15+ heures par pièce de contenu</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-blue-50 text-blue-700 mb-3">Automatisation Marketing</span>
+                        <h5 class="text-lg font-semibold mb-2">Assistant Campagne Marketing</h5>
+                        <p class="mb-4 text-sm">Orchestre l'ensemble du cycle de vie des campagnes marketing, de la planification à l'analyse des performances.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Résultats clés:</p>
+                            <ul class="space-y-1">
+                                <li>• Augmentation de 43% du ROI des campagnes</li>
+                                <li>• Réduction de 67% du temps de mise en marché</li>
+                                <li>• Amélioration de 56% des taux de conversion</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-blue-50 text-blue-700 mb-3">Analyse Concurrentielle</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent d'Analyse Concurrentielle</h5>
+                        <p class="mb-4 text-sm">Surveille et analyse en continu l'activité des concurrents sur tous les canaux pour identifier opportunités et menaces.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Capacités:</p>
+                            <ul class="space-y-1">
+                                <li>• Analyse automatique des mouvements concurrentiels</li>
+                                <li>• Détection précoce des tendances de marché</li>
+                                <li>• Recommendations stratégiques personnalisées</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-blue-50 text-blue-700 mb-3">Personnalisation</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent de Personnalisation Marketing</h5>
+                        <p class="mb-4 text-sm">Crée des expériences hyper-personnalisées en temps réel basées sur le comportement et les préférences de chaque utilisateur.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Capacités:</p>
+                            <ul class="space-y-1">
+                                <li>• Segmentation dynamique en temps réel</li>
+                                <li>• Optimisation continue des messages</li>
+                                <li>• Adaptation du parcours client à l'échelle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Génération de Leads et Ventes -->
+            <div class="max-w-5xl mx-auto mb-16">
+                <h4 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-chart-line text-xl mr-3"></i>
+                    Génération de Leads et Ventes
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-green-50 text-green-700 mb-3">Prospection</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent Prospecteur Autonome</h5>
+                        <p class="mb-4 text-sm">Identifie, analyse et qualifie automatiquement les prospects potentiels en fonction de critères prédéfinis.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Étude de cas:</p>
+                            <p>Intégration de l'analyse d'images de profil LinkedIn pour personnaliser les messages de prospection, augmentant les taux de réponse de 37%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-green-50 text-green-700 mb-3">Qualification</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent de Qualification Prédictive</h5>
+                        <p class="mb-4 text-sm">Évalue et score les leads en fonction de leur potentiel de conversion, permettant aux équipes commerciales de se concentrer sur les opportunités les plus prometteuses.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Résultats clés:</p>
+                            <ul class="space-y-1">
+                                <li>• Augmentation de 64% du taux de conversion des leads</li>
+                                <li>• Réduction de 58% du temps de qualification</li>
+                                <li>• Amélioration de 47% de la précision des prévisions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-green-50 text-green-700 mb-3">Engagement</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent d'Engagement Omnicanal</h5>
+                        <p class="mb-4 text-sm">Maintient une communication cohérente et personnalisée avec les prospects sur tous les canaux, optimisant le parcours d'achat.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Capacités:</p>
+                            <ul class="space-y-1">
+                                <li>• Synchronisation des messages sur tous les canaux</li>
+                                <li>• Adaptation contextuelle des communications</li>
+                                <li>• Optimisation du timing des interactions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-green-50 text-green-700 mb-3">Prévision</span>
+                        <h5 class="text-lg font-semibold mb-2">Assistant de Forecasting Commercial</h5>
+                        <p class="mb-4 text-sm">Utilise l'analyse prédictive pour anticiper les tendances de vente et optimiser la planification commerciale.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Résultats clés:</p>
+                            <ul class="space-y-1">
+                                <li>• Précision des prévisions améliorée de 78%</li>
+                                <li>• Réduction de 42% des stocks excédentaires</li>
+                                <li>• Amélioration de 53% de la gestion des ressources commerciales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Finance et CFO Office -->
+            <div class="max-w-5xl mx-auto mb-16">
+                <h4 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-chart-pie text-xl mr-3"></i>
+                    Finance et CFO Office
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-purple-50 text-purple-700 mb-3">Analyse Financière</span>
+                        <h5 class="text-lg font-semibold mb-2">Assistant CFO Stratégique</h5>
+                        <p class="mb-4 text-sm">Fournit des analyses de haut niveau et des recommandations stratégiques pour soutenir la prise de décision financière.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Capacités:</p>
+                            <ul class="space-y-1">
+                                <li>• Synthèse des indicateurs financiers clés</li>
+                                <li>• Identification proactive des risques et opportunités</li>
+                                <li>• Modélisation de scénarios financiers complexes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-purple-50 text-purple-700 mb-3">Reporting</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent de Reporting Financier</h5>
+                        <p class="mb-4 text-sm">Automatise la création de rapports financiers complexes, assurant précision et conformité réglementaire.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Résultats clés:</p>
+                            <ul class="space-y-1">
+                                <li>• Réduction de 85% du temps de préparation des rapports</li>
+                                <li>• Élimination de 95% des erreurs manuelles</li>
+                                <li>• Amélioration de 70% de la cohérence des données</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-purple-50 text-purple-700 mb-3">Prévision</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent de Prévision Budgétaire</h5>
+                        <p class="mb-4 text-sm">Utilise l'analyse avancée des données pour générer des prévisions budgétaires précises et adaptatives.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Capacités:</p>
+                            <ul class="space-y-1">
+                                <li>• Modélisation multi-scénarios</li>
+                                <li>• Ajustement dynamique des prévisions</li>
+                                <li>• Intégration de facteurs externes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-purple-50 text-purple-700 mb-3">Analyse</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent d'Analyse Financière</h5>
+                        <p class="mb-4 text-sm">Analyse conversationnelle des données financières qui combine collecte, traitement et visualisation pour générer des insights actionnables.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Architecture:</p>
+                            <p>Combinaison de modèles LLM avancés, d'interprétation de code Python et de systèmes de mémoire contextuelle pour une analyse financière en langage naturel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Connaissances Internes et Productivité -->
+            <div class="max-w-5xl mx-auto">
+                <h4 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-brain text-xl mr-3"></i>
+                    Connaissances Internes et Productivité
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-yellow-50 text-yellow-700 mb-3">Gestion des Connaissances</span>
+                        <h5 class="text-lg font-semibold mb-2">Assistant IA Privé</h5>
+                        <p class="mb-4 text-sm">Solution auto-hébergée qui centralise et contextualise les connaissances de l'entreprise tout en garantissant la confidentialité des données.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Architecture:</p>
+                            <ul class="space-y-1">
+                                <li>• Ollama pour LLM local</li>
+                                <li>• n8n pour l'automatisation des workflows</li>
+                                <li>• LangChain pour le framework d'agents</li>
+                                <li>• Postgres pour la mémoire conversationnelle</li>
+                                <li>• Qdrant pour la recherche documentaire</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-yellow-50 text-yellow-700 mb-3">Veille d'Information</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent d'Information Automatisé</h5>
+                        <p class="mb-4 text-sm">Collecte, analyse et synthétise en continu des informations pertinentes à partir de sources multiples, offrant une veille stratégique sans effort.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Architecture:</p>
+                            <p>Construit avec n8n pour l'automatisation des workflows, utilisant des flux RSS pour la collecte de données, GPT-4o pour l'analyse et des APIs de recherche pour le contexte additionnel.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-yellow-50 text-yellow-700 mb-3">Analyse de Données</span>
+                        <h5 class="text-lg font-semibold mb-2">Agent d'Analyse de Données</h5>
+                        <p class="mb-4 text-sm">Permet d'interagir avec les données en langage naturel, combinant scraping, analyse et visualisation en un seul assistant conversationnel.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Bénéfices:</p>
+                            <ul class="space-y-1">
+                                <li>• Élimine les changements de contexte entre outils</li>
+                                <li>• Permet l'analyse de données en langage naturel</li>
+                                <li>• Maintient le contexte conversationnel</li>
+                                <li>• Simplifie le workflow d'analyse de données</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card p-6 bg-white">
+                        <span class="category-badge bg-yellow-50 text-yellow-700 mb-3">Gestion de Projet</span>
+                        <h5 class="text-lg font-semibold mb-2">Assistant de Gestion de Projet</h5>
+                        <p class="mb-4 text-sm">Coordonne et optimise la gestion de projets complexes, assurant le suivi des tâches, des ressources et des délais.</p>
+                        <div class="text-sm text-gray-600">
+                            <p class="font-medium mb-1">Capacités:</p>
+                            <ul class="space-y-1">
+                                <li>• Planification automatique et réallocation des ressources</li>
+                                <li>• Détection précoce des risques de retard</li>
+                                <li>• Génération de rapports d'avancement</li>
+                                <li>• Facilitation de la communication entre équipes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold section-title mb-12 max-w-4xl mx-auto">Technologies et Outils</h3>
+            <div class="max-w-5xl mx-auto">
+                <p class="mb-10">Chez Galliera, nous utilisons les technologies les plus avancées pour construire des solutions agentiques robustes, évolutives et sécurisées.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="technology-card bg-white">
+                        <h4 class="text-lg font-semibold mb-3">Modèles de Langage</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <div>
+                                    <p class="font-medium">GPT-4o / OpenAI</p>
+                                    <p class="text-sm text-gray-600">Pour les capacités d'IA générale et le raisonnement</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <div>
+                                    <p class="font-medium">Claude 3.5 Sonnet</p>
+                                    <p class="text-sm text-gray-600">Pour la compréhension du langage naturel</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <div>
+                                    <p class="font-medium">Ollama</p>
+                                    <p class="text-sm text-gray-600">Pour l'exécution locale de LLMs</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="technology-card bg-white">
+                        <h4 class="text-lg font-semibold mb-3">Automatisation</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <div>
+                                    <p class="font-medium">n8n</p>
+                                    <p class="text-sm text-gray-600">Pour l'automatisation des workflows</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <div>
+                                    <p class="font-medium">Make.com</p>
+                                    <p class="text-sm text-gray-600">Pour l'automatisation avancée</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <div>
+                                    <p class="font-medium">Flowise</p>
+                                    <p class="text-sm text-gray-600">Pour les workflows d'IA</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="technology-card bg-white">
+                        <h4 class="text-lg font-semibold mb-3">Framework & Stockage</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <div>
+                                    <p class="font-medium">LangChain</p>
+                                    <p class="text-sm text-gray-600">Pour les frameworks d'agents</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <div>
+                                    <p class="font-medium">Postgres</p>
+                                    <p class="text-sm text-gray-600">Pour la mémoire conversationnelle</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <div>
+                                    <p class="font-medium">Qdrant</p>
+                                    <p class="text-sm text-gray-600">Pour la recherche documentaire</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="text-lg font-semibold mb-4">Principes Technologiques</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <div class="flex items-start mb-3">
+                                <i class="fas fa-shield-alt text-xl mr-3 mt-1"></i>
+                                <div>
+                                    <p class="font-medium">Sécurité et Confidentialité</p>
+                                    <p class="text-sm text-gray-600">Architecture qui garantit que les données sensibles restent protégées.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start mb-3">
+                                <i class="fas fa-sitemap text-xl mr-3 mt-1"></i>
+                                <div>
+                                    <p class="font-medium">Modularité et Évolutivité</p>
+                                    <p class="text-sm text-gray-600">Solutions conçues pour évoluer avec les besoins de votre entreprise.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-start mb-3">
+                                <i class="fas fa-plug text-xl mr-3 mt-1"></i>
+                                <div>
+                                    <p class="font-medium">Intégrations Faciles</p>
+                                    <p class="text-sm text-gray-600">Connexion fluide avec vos systèmes et applications existants.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-tachometer-alt text-xl mr-3 mt-1"></i>
+                                <div>
+                                    <p class="font-medium">Performance Optimale</p>
+                                    <p class="text-sm text-gray-600">Architecture conçue pour des temps de réponse rapides et une utilisation efficace des ressources.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leçons Clés Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold section-title mb-12 max-w-4xl mx-auto">Leçons Clés</h3>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <p class="text-lg font-semibold mb-2">1. La qualité des données est fondamentale</p>
+                    <p class="italic">"Peu importe la puissance de l'IA, une mauvaise entrée mène toujours à une mauvaise sortie."</p>
+                    <p class="text-sm mt-2">Commencez par vous concentrer sur la qualité et la structure de vos données.</p>
+                </div>
+                
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <p class="text-lg font-semibold mb-2">2. L'architecture prime sur les prompts</p>
+                    <p class="italic">"Pour construire des systèmes d'agents IA efficaces, l'architecture est plus importante que les prompts."</p>
+                    <p class="text-sm mt-2">Une architecture bien conçue permet d'obtenir des résultats supérieurs à de simples prompts perfectionnés.</p>
+                </div>
+                
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <p class="text-lg font-semibold mb-2">3. Éviter les systèmes d'IA isolés</p>
+                    <p class="italic">"La plupart des entreprises commettent l'erreur d'investir dans des systèmes d'IA à prompt unique et déconnectés."</p>
+                    <p class="text-sm mt-2">Les systèmes intégrés et orchestrés offrent un impact business nettement supérieur.</p>
+                </div>
+                
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <p class="text-lg font-semibold mb-2">4. Combiner intelligence et exécution</p>
+                    <p class="italic">"Un agent IA est comme un PDG sans entreprise - il a besoin d'une infrastructure d'exécution."</p>
+                    <p class="text-sm mt-2">Les agents IA ont besoin d'automatisation pour exécuter et d'orchestration pour fonctionner efficacement.</p>
+                </div>
+                
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <p class="text-lg font-semibold mb-2">5. L'humain reste essentiel</p>
+                    <p class="italic">"Les gagnants en 2025 ne seront pas ceux qui ont la 'meilleure' IA, mais ceux qui maîtrisent la symphonie humain + IA + automatisation."</p>
+                    <p class="text-sm mt-2">La supervision humaine des décisions clés reste indispensable pour des résultats optimaux.</p>
+                </div>
+                
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <p class="text-lg font-semibold mb-2">6. Adopter une approche progressive</p>
+                    <p class="italic">"Pour les groupes moins avancés en IA, passer 3-6 mois à organiser les données est plus précieux que de courir après les derniers modèles."</p>
+                    <p class="text-sm mt-2">Une transformation progressive et méthodique garantit des fondations solides pour votre succès en IA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-3xl font-bold section-title mb-12">Prêt à Transformer Votre Entreprise?</h3>
+                <div class="contact-card">
+                    <p class="mb-6 text-lg">Discutons de la façon dont les solutions agentiques de Galliera peuvent vous aider à atteindre vos objectifs business.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Nos Services</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Consultation Stratégique IA</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Développement de Solutions Agentiques</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Intégration avec vos Systèmes Existants</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Formation et Support Continu</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Notre Processus</h4>
+                            <ol class="space-y-2">
+                                <li class="flex items-start">
+                                    <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">1</span>
+                                    <span>Évaluation Initiale et Découverte</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">2</span>
+                                    <span>Conception de Solution Personnalisée</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">3</span>
+                                    <span>Développement et Implémentation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="inline-block w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs mr-2 mt-1">4</span>
+                                    <span>Optimisation Continue et Évolution</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a href="mailto:contact@galliera.com" class="btn btn-primary mx-2">Contactez-nous</a>
+                        <a href="#" class="btn btn-outline mx-2">Demander une Démo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black text-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col items-center text-center">
+                <h2 class="text-3xl font-bold mb-6">gallierā</h2>
+                <p class="mb-6 max-w-2xl">Transformez votre entreprise avec des solutions agentiques de pointe.</p>
+                <div class="flex space-x-4 mb-8">
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
+                    <a href="#" class="text-white hover:text-gray-400 transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="mailto:contact@galliera.com" class="text-white hover:text-gray-400 transition-colors"><i class="fas fa-envelope text-2xl"></i></a>
+                </div>
+                <p class="text-sm text-gray-400">&copy; 2025 Galliera Group. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
